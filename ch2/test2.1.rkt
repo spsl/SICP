@@ -1,5 +1,6 @@
-#lang racket
+#lang racket 
 
+;需要使用到test_cons文件
 (define x (cons 1 2))
 
 (define y (cons 3 4))
@@ -56,21 +57,10 @@
   (display (denom x)))
 
 
-         
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+
+(define (new-make-rat  n d)
+  (cond ((and (< n 0) (< d 0))
+         (cons (abs n) (abs d)))
+        ((or (< n 0)(< d 0))
+         (cons (- (abs n)) (abs d)))
+        (else (cons n d))))
