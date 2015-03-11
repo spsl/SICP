@@ -1,0 +1,8 @@
+#lang racket
+
+(cdr (car (cdr (cdr x))))
+
+
+
+
+
