@@ -1,9 +1,0 @@
-#lang racket
-
-(define (test-2-42 sum n)
-  (filter (lambda (tmp) 
-            (= sum
-                (+ (car tmp)
-                   (car (cdr tmp))
-                   (car (cdr (cdr tmp))))))
-          (unique-three n)))

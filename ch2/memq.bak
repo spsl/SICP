@@ -1,9 +1,0 @@
-#lang racket
-
-(define (memq word words)
-  (if (null? words)
-      #f
-      (or (eq? word
-               (car words))
-          (memq word (cdr words)))))
-         

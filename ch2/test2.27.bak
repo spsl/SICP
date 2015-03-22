@@ -1,6 +1,0 @@
-#lang racket
-
-(define (reserve x)
-  (cond ((null? x) '())
-        (else (cons (reserve (cdr x))
-              (car x)))))
