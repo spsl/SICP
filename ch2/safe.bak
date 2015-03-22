@@ -1,0 +1,11 @@
+#lang racket
+
+
+(define (safe? position)
+  (define (iter x n tmp)
+    (cond ((null? tmp)
+           #f)
+          (else (not (or (= x (car tmp))
+                         (= n (abs (- x (car tmp))))
+                         (iter x (+ x 1)(cdr tmp)))))))
+  (iter (car position) 1 (cdr position)))
